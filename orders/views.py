@@ -25,3 +25,23 @@ class OrderProductViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = OrderProduct.objects.all()
     serializer_class = OrderProductSerializer
+
+
+class StoreView(APIView):
+    def get(self, request):
+        payload = verify_token(request)
+        store = Orders.objects.all()
+        serializer = OrdersSerializer(store, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        pass
+
+    def delete(self, request):
+        pass
+
+    def put(self, request):
+        pass
+
+    def patch(self, request):
+        pass

@@ -20,3 +20,23 @@ class RestaurantViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
+
+
+class StoreView(APIView):
+    def get(self, request):
+        payload = verify_token(request)
+        store = Restaurant.objects.all()
+        serializer = RestaurantSerializer(store, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        pass
+
+    def delete(self, request):
+        pass
+
+    def put(self, request):
+        pass
+
+    def patch(self, request):
+        pass
