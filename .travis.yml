@@ -6,7 +6,7 @@ env:
       - PSQL_PASS=francisco123*
       - PSQL_DBNAME=francisco_morales_d
       - PSQL_HOST=localhost
-      - PSQL_PORT=5432
+      - PSQL_PORT=5509
 
 services:
     - postgresql
