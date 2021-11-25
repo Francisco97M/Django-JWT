@@ -10,18 +10,18 @@ from users.views import verify_token
 
 
 class StatusViewSet(viewsets.ModelViewSet):
-    #permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Status.objects.all()
     serializer_class = StatusSerializer
 
 
 class OrdersViewSet(viewsets.ModelViewSet):
-    #permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Orders.objects.all()
     serializer_class = OrdersSerializer
 
 
 class OrderProductViewSet(viewsets.ModelViewSet):
-    #permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = OrderProduct.objects.all()
     serializer_class = OrderProductSerializer

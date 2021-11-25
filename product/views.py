@@ -11,6 +11,6 @@ from users.views import verify_token
 
 
 class ProductViewSet(viewsets.ModelViewSet):
-    #permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Product.objects.all()
     serializer_class = ProductSerializer

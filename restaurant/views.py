@@ -11,12 +11,12 @@ from users.views import verify_token
 
 
 class DirectionViewSet(viewsets.ModelViewSet):
-    #permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Direction.objects.all()
     serializer_class = DirectionSerializer
 
 
 class RestaurantViewSet(viewsets.ModelViewSet):
-    #permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
